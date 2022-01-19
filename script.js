@@ -6,6 +6,8 @@
    BONUS:
    Usiamo il DOM per stampare e chiedere le informazioni all'utente!*/
 
+
+   // // STAMPO OGGETTO STUDDENTE 
 const studenteElement = document.getElementById('studente');
 
 const studenteUno = {
@@ -14,39 +16,46 @@ const studenteUno = {
     eta: 27, 
 }
 
-for (let key in studenteUno) {
-    console.log(`${key} : ${studenteUno[key]}`);
+for (let key in studenteUno) {    
     let studToPrint = (`${key} : ${studenteUno[key]}`);
     studenteElement.innerHTML += `<div>${studToPrint}</div>`;
 }
 
+// // CREO ARRAYY DI STUDENTI SU CUI CICLARE
 
 const studentList = [
-
-studenteDue = {
-    nome: 'Lucia',
-    cognome: 'Dragoni',
-    eta: 27, 
-},
-
-studenteTre = {
-    nome: 'Martina',
-    cognome: 'Bucciarelli',
-    eta: 27, 
-},
-
-studenteQuattro = {
-    nome: 'Lucia',
-    cognome: 'Bonini',
-    eta: 20, 
-}
+    studenteDue = {nome: 'Antonella', cognome: 'Dragoni', eta: 27},
+    studenteTre = {nome: 'Martina', cognome: 'Bucciarelli', eta: 27},
+    studenteQuattro = {nome: 'Lucia', cognome: 'Bonini', eta: 20}
 ]
 
-console.log(studentList);
+// // Stampare nome e cognome oggetti array
 
+const listToPrint = document.getElementById('lista-studenti');
+let print = '';
+
+for (let i = 0; i < studentList.length; i++){
+
+    let currentStudent = studentList[i];
+      
+    for(let key in currentStudent){
+        if (key !== 'eta') {         
+            listToPrint.innerHTML += `<div>${[key]} : ${currentStudent[key]}</div>`;
+        }
+        if (key == 'cognome'){
+            listToPrint.innerHTML += `<hr>`;
+        }        
+    }
+}
+
+
+// < FUNZIONEREBBE ANCHE COSI' >
 // for (let i = 0; i < studentList.length; i++){
-//     console.log(`QUA: ${studentList[i]}`);
-//     const listaToPrint = studentList[i];
-    
-//     for (let key in )
-// }
+//     const currentStudent = studentList[i];
+
+//     const currentName = currentStudent.nome;
+//     const currentSurname = currentStudent.cognome;
+
+//     console.log(currentName);
+//     console.log(currentSurname);
+//     }
