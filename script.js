@@ -8,5 +8,6 @@ const studente = {
 
 for (let key in studente) {
     console.log(`${key} : ${studente[key]}`);
-    studenteElement.innerHTML = (`${key} : ${studente[key]}`);
+    let studToPrint = (`${key} : ${studente[key]}`);
+    studenteElement.innerHTML += `<div>${studToPrint}</div>`;
 }
