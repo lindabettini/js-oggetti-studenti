@@ -1,3 +1,5 @@
+const studenteElement = document.getElementById('studente');
+
 const studente = {
     nome: 'Linda',
     cognome: 'Bettini',
@@ -6,4 +8,5 @@ const studente = {
 
 for (let key in studente) {
     console.log(`${key} : ${studente[key]}`);
+    studenteElement.innerHTML = (`${key} : ${studente[key]}`);
 }
