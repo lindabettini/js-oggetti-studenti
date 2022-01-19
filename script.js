@@ -6,6 +6,10 @@
    BONUS:
    Usiamo il DOM per stampare e chiedere le informazioni all'utente!*/
 
+   const getName = prompt('Inserisci il nome di uno studente');
+   const getSurame = prompt('Inserisci il cognome dello studente');
+   const getAge = prompt("Inserisci l'eta' dello studente");   
+
 
    // // STAMPO OGGETTO STUDDENTE 
 const studenteElement = document.getElementById('studente');
@@ -26,8 +30,15 @@ for (let key in studenteUno) {
 const studentList = [
     studenteDue = {nome: 'Antonella', cognome: 'Dragoni', eta: 27},
     studenteTre = {nome: 'Martina', cognome: 'Bucciarelli', eta: 27},
-    studenteQuattro = {nome: 'Lucia', cognome: 'Bonini', eta: 20}
+    studenteQuattro = {nome: 'Lucia', cognome: 'Bonini', eta: 20},
 ]
+
+const studenteCinque = {
+    nome: getName, 
+    cognome: getSurame, 
+    eta: getAge}
+
+studentList.push(studenteCinque);
 
 // // Stampare nome e cognome oggetti array
 
@@ -47,7 +58,6 @@ for (let i = 0; i < studentList.length; i++){
         }        
     }
 }
-
 
 // < FUNZIONEREBBE ANCHE COSI' >
 // for (let i = 0; i < studentList.length; i++){
