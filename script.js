@@ -6,26 +6,39 @@
    BONUS:
    Usiamo il DOM per stampare e chiedere le informazioni all'utente!*/
 
-   const getName = prompt('Inserisci il nome di uno studente');
-   const getSurame = prompt('Inserisci il cognome dello studente');
-   const getAge = prompt("Inserisci l'eta' dello studente");   
 
+// // CHIEDO DATI ALL'UTENTE
 
-   // // STAMPO OGGETTO STUDDENTE 
+const getName = prompt('Inserisci il nome di uno studente');
+const getSurame = prompt('Inserisci il cognome dello studente');
+const getAge = prompt("Inserisci l'eta' dello studente");   
+
+// // PRENDO ELEMENTI DA DOM
 const studenteElement = document.getElementById('studente');
+const listToPrint = document.getElementById('lista-studenti');
 
+//~_________________________________________________
+//~             ESERCIZIO PRIMA PARTE
+//~_________________________________________________
+
+// ° Crego oggetto 
 const studenteUno = {
     nome: 'Linda',
     cognome: 'Bettini',
     eta: 27, 
 }
 
+// ° Stampo oggetto
 for (let key in studenteUno) {    
     let studToPrint = (`${key} : ${studenteUno[key]}`);
     studenteElement.innerHTML += `<div>${studToPrint}</div>`;
 }
 
-// // CREO ARRAYY DI STUDENTI SU CUI CICLARE
+//~_________________________________________________
+//~             ESERCIZIO SECONDA PARTE 
+//~_________________________________________________
+
+// // CREO ARRAYY DI OGGETTI 
 
 const studentList = [
     studenteDue = {nome: 'Antonella', cognome: 'Dragoni', eta: 27},
@@ -33,17 +46,15 @@ const studentList = [
     studenteQuattro = {nome: 'Lucia', cognome: 'Bonini', eta: 20},
 ]
 
+// °°° Creo un oggetto "studente" inserendo i prompt nelle proprieta'
 const studenteCinque = {
     nome: getName, 
     cognome: getSurame, 
     eta: getAge}
-
+// °°° E lo aggiungo all'array di oggetti
 studentList.push(studenteCinque);
 
-// // Stampare nome e cognome oggetti array
-
-const listToPrint = document.getElementById('lista-studenti');
-let print = '';
+// // STAMPO le proprieta' Nome e Cognome degli oggetti dell'array
 
 for (let i = 0; i < studentList.length; i++){
 
