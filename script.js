@@ -71,7 +71,7 @@ for (let i = 0; i < studentList.length; i++){
 }
 
 // < FUNZIONEREBBE ANCHE COSI' >
-// for (let i = 0; i < studentList.length; i++){
+// for (let i = 0; i < studentList.length; i++) {
 //     const currentStudent = studentList[i];
 
 //     const currentName = currentStudent.nome;
@@ -79,4 +79,4 @@ for (let i = 0; i < studentList.length; i++){
 
 //     console.log(currentName);
 //     console.log(currentSurname);
-//     }
+// }
